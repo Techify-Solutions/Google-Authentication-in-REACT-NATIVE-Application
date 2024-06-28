@@ -1,0 +1,11 @@
+pod 'Firebase/Auth'
+pod 'GoogleSignIn'
+
+pod install --repo-update
+
+target 'ExampleApp' do
+config = use_native_modules!
+use_frameworks! :linkage => :static
+$RNFirebaseAsStaticFramework = true
+...
+end
